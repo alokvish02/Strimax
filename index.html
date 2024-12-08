@@ -43,8 +43,6 @@
     <!-- Responsive Settings -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
 
 <body>
@@ -54,39 +52,6 @@
         <!-- style switcher -->
         <div class="style-switcher">
             <a href="#" id="switcher-toggler"><i class="fa fa-cog"></i></a>
-            <!-- <h3>Color Skins</h3>
-            <ul id="styleOptions" title="Switch Color">
-                <li>
-                    <a href="" data-theme="color-default" class="color-default">
-
-					</a>
-                </li>
-                <li>
-                    <a href="" data-theme="color-2" class="color-2">
-
-					</a>
-                </li>
-                <li>
-                    <a href="" data-theme="color-3" class="color-3">
-
-					</a>
-                </li>
-                <li>
-                    <a href="" data-theme="color-4" class="color-4">
-
-					</a>
-                </li>
-                <li>
-                    <a href="" data-theme="color-5" class="color-5">
-
-					</a>
-                </li>
-                <li>
-                    <a href="" data-theme="color-6" class="color-6">
-
-					</a>
-                </li>
-            </ul> -->
             <div class="language-feature">
                 <button class="ltr-switcher" data-href="#googtrans(en|en)">LTR</button>
                 <!-- /.ltr-switcher -->
@@ -300,14 +265,15 @@
         overflow: hidden;
     }
 
-    .slider-thirteen__bg iframe {
+    .slider-thirteen__bg video {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
         border: none;
-        pointer-events: none; /* Prevent interaction with the iframe */
+        pointer-events: none; /* Prevent interaction with the video */
+        object-fit: cover; /* Ensure the video covers the entire container */
     }
 
     .slider-thirteen {
@@ -319,11 +285,28 @@
         position: relative;
         z-index: 1;
     }
+
+    .mute-btn {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        z-index: 2;
+        background: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: white;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+    }
+
+    .mute-btn i {
+        font-size: 20px;
+    }
 </style>
 
 <section class="slider-thirteen">
     <div class="slider-thirteen__bg">
-        <iframe src="https://www.youtube.com/embed/YqsL5GFziJc?start=0.2&autoplay=1&mute=1&loop=1&playlist=YqsL5GFziJc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <video id="background-video" src="blog/home.mp4" autoplay muted loop></video>
     </div>
     <div class="banner-carousel owl-theme owl-carousel">
         <div class="item">
@@ -385,8 +368,31 @@
         <!-- item -->
     </div>
     <!-- slider-thirteen__carousel -->
+    <button class="mute-btn" id="mute-btn">
+        <i class="fas fa-volume-mute"></i>
+    </button>
 </section>
 <!-- /.slider-thirteen -->
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var video = document.getElementById('background-video');
+        var muteBtn = document.getElementById('mute-btn');
+        var icon = muteBtn.querySelector('i');
+
+        muteBtn.addEventListener('click', function() {
+            if (video.muted) {
+                video.muted = false;
+                icon.classList.remove('fa-volume-mute');
+                icon.classList.add('fa-volume-up');
+            } else {
+                video.muted = true;
+                icon.classList.remove('fa-volume-up');
+                icon.classList.add('fa-volume-mute');
+            }
+        });
+    });
+</script>
 
         <section class="about-thirteen">
             <div class="container">
