@@ -45,12 +45,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
-
-    <!-- Include glightbox CSS -->
-<link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-<!-- Include glightbox JS -->
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>   
 </head>
 
 <body>
@@ -60,39 +55,6 @@
         <!-- style switcher -->
         <div class="style-switcher">
             <a href="#" id="switcher-toggler"><i class="fa fa-cog"></i></a>
-            <!-- <h3>Color Skins</h3>
-            <ul id="styleOptions" title="Switch Color">
-                <li>
-                    <a href="" data-theme="color-default" class="color-default">
-
-					</a>
-                </li>
-                <li>
-                    <a href="" data-theme="color-2" class="color-2">
-
-					</a>
-                </li>
-                <li>
-                    <a href="" data-theme="color-3" class="color-3">
-
-					</a>
-                </li>
-                <li>
-                    <a href="" data-theme="color-4" class="color-4">
-
-					</a>
-                </li>
-                <li>
-                    <a href="" data-theme="color-5" class="color-5">
-
-					</a>
-                </li>
-                <li>
-                    <a href="" data-theme="color-6" class="color-6">
-
-					</a>
-                </li>
-            </ul> -->
             <div class="language-feature">
                 <button class="ltr-switcher" data-href="#googtrans(en|en)">LTR</button>
                 <!-- /.ltr-switcher -->
@@ -107,10 +69,6 @@
             </div>
             <!-- /.language-feature -->
         </div>
-        <!-- Preloader -->
-        <!-- <div class="preloader">
-            <div class="icon" style="background-image: url(images/update-15-08-2024/loader-12.png);"></div>
-        </div> -->
 
 
         <!--Mobile Menu-->
@@ -287,372 +245,141 @@
             </div>
             <!-- /.topbar -->
         </header>
-<style>
-    .slider-thirteen__bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        overflow: hidden;
-    }
-
-    .slider-thirteen__bg iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-        pointer-events: none; /* Prevent interaction with the iframe */
-    }
-
-    .slider-thirteen {
-        position: relative;
-        overflow: hidden;
-    }
-
-    .banner-carousel .item {
-        position: relative;
-        z-index: 1;
-    }
-    :root {
-    --thm-font: "Teko", sans-serif;
-    --thm-b-font: "Rubik", sans-serif;
-   
-    --thm-base: #644EEE; /* Example base color */
-
-}
-
-body {
-    font-size: 16px;
-    font-family: var(--thm-b-font);
-    color: var(--thm-text);
-    line-height: 2.125em;
-    font-weight: 400;
-    background: #ffffff;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    top: 0 !important;
-}
-
-a {
-    text-decoration: none;
-    cursor: pointer;
-    color: var(--thm-base);
-}
-
-.theme_color {
-    color: var(--thm-base);
-}
-
-a:hover,
-a:focus,
-a:visited,
-a:active,
-button:active {
-    text-decoration: none;
-    outline: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    position: relative;
-    font-weight: 400;
-    margin: 0px 0px 20px;
-    background: none;
-    line-height: 1.25em;
-    font-family: var(--thm-font);
-    color: var(--thm-black);
-}
-
-h1 {
-    font-size: 140px;
-}
-
-h2 {
-    font-size: 70px;
-}
-
-h3 {
-    font-size: 60px;
-}
-
-h4 {
-    font-size: 40px;
-}
-
-h5 {
-    font-size: 30px;
-}
-
-h6 {
-    font-size: 26px;
-}
-
-input,
-select,
-button {
-    font-family: var(--thm-font);
-}
-
-textarea {
-    overflow: hidden;
-    resize: none;
-}
-
-button {
-    outline: none !important;
-    cursor: pointer;
-}
-
-p {
-    line-height: 2.125em;
-    margin: 0 0 20px;
-}
-
-.text {
-    line-height: 2.125em;
-    margin: 0 0;
-}
-
-.icon {
-    font-family: var(--thm-font);
-}
-
-.video-box {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: 20px; /* Add padding around the video */
-    box-sizing: border-box; /* Ensure padding is included in the box size */
-}
-
-.video-box iframe {
-    width: 100%;
-    height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    border: none;
-    object-fit: cover; /* Ensures the video covers the area without distortion */
-}
-
-@media (min-width: 768px) {
-    .video-box {
-        width: 50%;
-        height: 600px; /* Custom height */
-        top: 100px;
-    }
-
-    .icon-boxes {
-        width: 50%;
-    }
-    .sec-title-thirteen__title {
-        text-align: center;
-        font-family: var(--thm-b-font);
-    }
-}
-
-@media (max-width: 767px) {
-    .video-box {
-        height: 300px; /* Custom height for mobile screens */
-    }
-    .sec-title-thirteen__title {
-        text-align: center;
-        font-family: var(--thm-b-font);
-    }
-}
-</style>
-
-<section class="page-banner">
-    <div class="image-layer" style="background-image:url(https://images.unsplash.com/photo-1566242983008-e310eb730b7e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjR8fGFib3V0JTIwdXN8ZW58MHx8MHx8fDA%3D);"></div>
-    <div class="shape-1"></div>
-    <div class="shape-2"></div>
-    <div class="banner-inner">
-        <div class="auto-container">
-            <div class="inner-container clearfix">
-                <h1>About Us</h1>
-                <!-- <div class="page-nav">
-                    <ul class="bread-crumb clearfix">
-                        <li><a href="index-main.html">Home</a></li>
-                        <li class="active">Contact</li>
-                    </ul>
-                </div> -->
-            </div>
-        </div>
-    </div>
-</section>
-<!-- ======= About Section ======= -->
-<section id="about" class="about">
-    <div class="container-fluid">
-        <!-- <h2 class="sec-title-thirteen__title">About Us</h2> -->
-        <div class="row">
-            <div class="col-xl-5 col-lg-8 video-box d-flex justify-content-center align-items-stretch position-relative py-5 px-lg-5">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/7DSXNrBsUIk?start=180" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-
-            <div class="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
-                <!-- <h4>Background and Experience of Mr. Ashok Chavan</h4> -->
-                <h4 class="title"><a href="#">Background and Experience of Mr. Ashok Chavan</a></h4>
-                <p>Mr. Ashok Chavan, the Managing Director of Sterimax, is a Technocrat and award-winning entrepreneur with over 20 years of experience in the Blow Fill Seal (BFS) and Form Fill Seal (FFS) machine technology. He is a graduate engineer who founded Sterimax in November 2007 with the vision of providing innovative machinery to the Indian pharmaceutical industry.</p>
-
-                <div class="icon-box">
-                    <div class="icon"><i class="bx bx-share-alt"></i></div>
-                    <h4 class="title"><a href="#">Addressing Market Gaps</a></h4>
-                    <p class="description">When Indian manufacturers struggled to meet the demand for IV fluid bottles and Water for Injection (WFI) due to the high cost of BFS/FFS machines and molds, which ran into hundreds of millions of rupees, Mr. Chavan recognized the gap and took initiative to provide affordable, high-quality solutions for the pharmaceutical sector.</p>
-                </div>
-
-                <div class="icon-box">
-                    <div class="icon"><i class="bx bx-happy-alt"></i></div>
-                    <h4 class="title"><a href="#">Sterimax's Growth and Success</a></h4>
-                    <p class="description">Under his leadership, Sterimax established a state-of-the-art manufacturing unit in Mahape, Navi Mumbai, equipped with over 20 imported VMC machines. The company has grown into one of the leading manufacturers of BFS/FFS machines in India, serving the pharmaceutical packaging market with a strong technical, marketing, and service team.</p>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
-<!-- Vendor JS Files -->
-<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="assets/vendor/php-email-form/validate.js"></script>
-
-<!-- Template Main JS File -->
-<script src="assets/js/main.js"></script>
-
-<script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initialize glightbox
-        const lightbox = GLightbox({
-            selector: '.glightbox'
-        });
-    });
-</script>
-</section><!-- End About Section -->
-
-
-<section class="tabs-thirteen">
-    <div class="container">
-        <div class="row tabs-box">
-            <div class="col-lg-3 d-flex align-items-end wow fadeInUp" data-wow-delay="00ms">
-                <!--Tab Btns-->
-                <ul class="tabs-thirteen__btns tab-buttons clearfix">
-                    <li data-tab="#tab-1" class="tab-btn active-btn">Our Mission</li>
-                    <li data-tab="#tab-2" class="tab-btn">Our Vision</li>
-                    <li data-tab="#tab-3" class="tab-btn">Our Goal</li>
-                </ul>
-            </div>
-            <div class="col-lg-9 wow fadeInUp" data-wow-delay="100ms">
-                <!--Tabs Container-->
-                <div class="tabs-content">
-                    <!--Tab-->
-                    <div class="tab active-tab" id="tab-1">
-                        <div class="tabs-thirteen__tab-content">
-                            <div class="row d-flex align-items-center">
-                                <div class="col-md-5">
-                                    <div class="tabs-thirteen__image">
-                                        <img src="images/update-15-08-2024/resources/tab-13-1.jpg" alt="mission">
-                                    </div>
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="tabs-thirteen__content">
-                                        <h3 class="tabs-thirteen__content__title">Mission</h3>
-                                        <p class="tabs-thirteen__content__text">
-                                            We are committed to providing the best customer experience in the Blow Fill Seal field through our SteriMax trained and experienced staff. Our focus is on maintaining timely, transparent, and truthful commitment with our customers.
-                                        </p>
-                                        <ul class="list-unstyled tabs-thirteen__content__list">
-                                            <li>
-                                                <i class="fa fa-check-circle"></i> Customer-centric approach
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-check-circle"></i> Timely delivery and transparent communication
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-check-circle"></i> Highly skilled and trained staff
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Tab-->
-                    <div class="tab" id="tab-2">
-                        <div class="tabs-thirteen__tab-content">
-                            <div class="row d-flex align-items-center">
-                                <div class="col-md-5">
-                                    <div class="tabs-thirteen__image">
-                                        <img src="images/update-15-08-2024/resources/tab-13-1.jpg" alt="vision">
-                                    </div>
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="tabs-thirteen__content">
-                                        <h3 class="tabs-thirteen__content__title">Vision</h3>
-                                        <p class="tabs-thirteen__content__text">
-                                            Our vision is to be the most preferred Blow Fill Seal Machine OEM in India, delivering top-notch machines with unparalleled reliability and customer satisfaction.
-                                        </p>
-                                        <ul class="list-unstyled tabs-thirteen__content__list">
-                                            <li>
-                                                <i class="fa fa-check-circle"></i> Preferred OEM in Blow Fill Seal machines
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-check-circle"></i> Consistent focus on quality and innovation
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-check-circle"></i> Unmatched customer satisfaction
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Tab-->
-                    <div class="tab" id="tab-3">
-                        <div class="tabs-thirteen__tab-content">
-                            <div class="row d-flex align-items-center">
-                                <div class="col-md-5">
-                                    <div class="tabs-thirteen__image">
-                                        <img src="images/update-15-08-2024/resources/tab-13-1.jpg" alt="goal">
-                                    </div>
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="tabs-thirteen__content">
-                                        <h3 class="tabs-thirteen__content__title">Goal</h3>
-                                        <p class="tabs-thirteen__content__text">
-                                            Our goal is to expand SteriMax's brand presence globally, ensuring the pharmaceutical industry benefits from our high-quality and cost-effective Blow Fill Seal solutions.
-                                        </p>
-                                        <ul class="list-unstyled tabs-thirteen__content__list">
-                                            <li>
-                                                <i class="fa fa-check-circle"></i> Global brand presence for SteriMax
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-check-circle"></i> Expanding to new international markets
-                                            </li>
-                                            <li>
-                                                <i class="fa fa-check-circle"></i> Delivering quality and affordability worldwide
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
+        <section class="page-banner">
+            <div class="image-layer" style="background-image:url(https://images.unsplash.com/photo-1676222490082-3ca102a06737?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);"></div>
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
+            <div class="banner-inner">
+                <div class="auto-container">
+                    <div class="inner-container clearfix">
+                        <h1>Memorise</h1>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+
+
+
+
+        <section class="gallery-section">
+            <div class="container">
+                <div class="row">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 1">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 2">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 3">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 4">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 5">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 6">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 7">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 8">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 9">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 10">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 11">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 12">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 13">
+                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 14">
+                </div>
+            </div>
+          </section>
+          
+          <div class="lightbox" id="lightbox">
+            <img src="" alt="Lightbox Image" id="lightbox-img">
+          </div>
+          
+          <style>
+            /* General Gallery Styling */
+            .gallery-section {
+                padding: 20px 0;
+                background-color: #f9f9f9;
+            }
+          
+            .gallery-section .row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px; /* Reduced gap for better alignment */
+                justify-content: center;
+            }
+          
+            /* Styling for Gallery Items */
+            .gallery-item {
+                width: calc(25% - 10px); /* Four items per row with consistent spacing */
+                height: auto;
+                border-radius: 10px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+                cursor: pointer;
+            }
+          
+            .gallery-item:hover {
+                transform: scale(1.05);
+                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            }
+          
+            /* Lightbox Styling */
+            .lightbox {
+                display: none;
+                position: fixed;
+                z-index: 999;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+                justify-content: center;
+                align-items: center;
+            }
+          
+            .lightbox img {
+                max-width: 90%;
+                max-height: 90%;
+                border-radius: 10px;
+                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+            }
+          
+            .lightbox:active {
+                display: none;
+            }
+          
+            /* Responsive Design */
+            @media (max-width: 1024px) {
+                .gallery-item {
+                    width: calc(33.33% - 10px); /* Three items per row on medium screens */
+                }
+            }
+          
+            @media (max-width: 768px) {
+                .gallery-item {
+                    width: calc(50% - 10px); /* Two items per row on small screens */
+                }
+            }
+          
+            @media (max-width: 576px) {
+                .gallery-item {
+                    width: 100%; /* One item per row on extra small screens */
+                }
+            }
+          </style>
+          
+          <script>
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+          
+            galleryItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    lightbox.style.display = 'flex';
+                    lightboxImg.src = item.src;
+                });
+            });
+          
+            lightbox.addEventListener('click', () => {
+                lightbox.style.display = 'none';
+            });
+          </script>
+
 
 
 <section class="footer-twelev footer-twelev--home-13">

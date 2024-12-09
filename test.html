@@ -175,19 +175,11 @@
                                             </ul>   
                                     </li>
                                     <li class="dropdown"><a href="portfolio.html">Portfolio<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></a>
-                                        <!-- <ul>
-                                            <li><a href="portfolio.html">Portfolio</a></li>
-                                            <li><a href="portfolio-2-columns.html">Portfolio 2 Col <span>new</span></a>
+                                        <ul>
+                                            <li><a href="portfolio.html">Client </a></li>
+                                            <li><a href="gallery.html">Gallery <span>new</span></a>
                                             </li>
-                                            <li><a href="portfolio-4-columns.html">Portfolio 4 Col <span>new</span></a>
-                                            </li>
-                                            <li><a href="portfolio-masonary.html">Portfolio Masonary
-                                                    <span>new</span></a></li>
-                                            <li><a href="portfolio-single.html">Portfolio Single 01</a></li>
-                                            <li><a href="portfolio-single-2.html">Portfolio Single 02</a></li>
-                                            <li><a href="portfolio-single-3.html">Portfolio Single 03
-                                                </a></li>
-                                        </ul> -->
+                                        </ul> 
                                     </li>
                                     <li class="dropdown"><a href="facility.html">Facility<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></a>
                                         
@@ -275,110 +267,247 @@
         </section>
 
 
-        <section class="footer-twelev footer-twelev--home-13">
-            <div class="footer-twelev__bg" style="background-image: url(images/update-15-08-2024/shapes/footer-12-shape.png);"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="footer-twelev__widget">
-                            <h6 class="footer-twelev__title">Sterimax India Pvt. Ltd.</h6>
-                            <p class="footer-twelev__text">Sterimax was established in November, 2007 with vision of serving pharmaceutical Industry with his innovative machineries manufactured first time in India. In India there was huge demand for IV Fluid….</p>
-                            <form method="post" action="contact.html">
-                                <input type="email" name="email" value="" placeholder="Email Address" required="">
-                                <button type="submit" class="theme-btn"><i class="fas fa-paper-plane"></i></button>
-                            </form>
-                            <div class="footer-twelev__checked-box">
-                                <input type="checkbox" checked="" name="save-data" id="save-data">
-                                <label for="save-data"><span></span>I agree to all your terms and policies</label>
-                            </div>
-                        </div>
+
+
+<section class="gallery-section">
+    <div class="container">
+        <div class="row">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 1">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 2">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 3">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 4">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 5">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 6">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 7">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 8">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 9">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 10">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 11">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 12">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 13">
+            <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 14">
+        </div>
+    </div>
+  </section>
+  
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Lightbox Image" id="lightbox-img">
+  </div>
+  
+  <style>
+    /* General Gallery Styling */
+    .gallery-section {
+        padding: 20px 0;
+        background-color: #f9f9f9;
+    }
+  
+    .gallery-section .row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Reduced gap for better alignment */
+        justify-content: center;
+    }
+  
+    /* Styling for Gallery Items */
+    .gallery-item {
+        width: calc(25% - 10px); /* Four items per row with consistent spacing */
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        cursor: pointer;
+    }
+  
+    .gallery-item:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    /* Lightbox Styling */
+    .lightbox {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+        justify-content: center;
+        align-items: center;
+    }
+  
+    .lightbox img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 10px;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+  
+    .lightbox:active {
+        display: none;
+    }
+  
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+        .gallery-item {
+            width: calc(33.33% - 10px); /* Three items per row on medium screens */
+        }
+    }
+  
+    @media (max-width: 768px) {
+        .gallery-item {
+            width: calc(50% - 10px); /* Two items per row on small screens */
+        }
+    }
+  
+    @media (max-width: 576px) {
+        .gallery-item {
+            width: 100%; /* One item per row on extra small screens */
+        }
+    }
+  </style>
+  
+  <script>
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+  
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            lightbox.style.display = 'flex';
+            lightboxImg.src = item.src;
+        });
+    });
+  
+    lightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+  </script>
+
+
+
+
+<section class="footer-twelev footer-twelev--home-13">
+    <div class="footer-twelev__bg" style="background-image: url(images/update-15-08-2024/shapes/footer-12-shape.png);"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="footer-twelev__widget">
+                    <h6 class="footer-twelev__title">Sterimax India Pvt. Ltd.</h6>
+                    <p class="footer-twelev__text">Sterimax was established in November, 2007 with vision of serving pharmaceutical Industry with his innovative machineries manufactured first time in India. In India there was huge demand for IV Fluid….</p>
+                    <form method="post" action="contact.html">
+                        <input type="email" name="email" value="" placeholder="Email Address" required="">
+                        <button type="submit" class="theme-btn"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                    <div class="footer-twelev__checked-box">
+                        <input type="checkbox" checked="" name="save-data" id="save-data">
+                        <label for="save-data"><span></span>I agree to all your terms and policies</label>
                     </div>
-                    <!-- item -->
-                    <div class="col-lg-2 col-md-6">
-                        <div class="footer-twelev__widget">
-                            <h6 class="footer-twelev__title">Explore</h6>
-                            <ul>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="team.html">Meet Our Team</a></li>
-                                <li><a href="portfolio.html">Our Portfolio</a></li>
-                                <li><a href="blog.html">Latest News</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- item -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-twelev__widget">
-                            <h6 class="footer-twelev__title">Contact</h6>
-                            <div class="footer-twelev__info">
-                                <p class="footer-twelev__text">A606/1B, TTC Industrial Area, M.I.D.C.
-                                    Near Millennium Business Park, Mahape,
-                                    Navi Mumbai-400710
-                                    Maharastra, India</p>
-                                <ul>
-                                    <li><span class="linoor-icon-three-telephone-1"></span><a href="tel:3035550105">+912227784440</a></li>
-                                    <li><span class="linoor-icon-three-email-1"></span><a href="mailto:sales@sterimaxengineering.com">sales@sterimaxengineering.com</a></li>
-                                </ul>
-                                <div class="footer-twelev__social">
-                                    <a href="#"><span class="fab fa-facebook-f"></span></a>
-                                    <a href="#"><span class="fab fa-twitter"></span></a>
-                                    <a href="#"><span class="fab fa-pinterest-p"></span></a>
-                                    <a href="#"><span class="fab fa-instagram"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- item -->
-                    <div class="col-lg-3 col-md-6">
-                        <div class="footer-twelev__widget footer-twelev__widget--gallery">
-                            <h6 class="footer-twelev__title">Gallery</h6>
-                            <div class="footer-twelev__gallery">
-                                <img src="images/update-15-08-2024/resources/gallery-1-1.jpg" alt="linoor">
-                                <img src="images/update-15-08-2024/resources/gallery-1-2.jpg" alt="linoor">
-                                <img src="images/update-15-08-2024/resources/gallery-1-3.jpg" alt="linoor">
-                                <img src="images/update-15-08-2024/resources/gallery-1-4.jpg" alt="linoor">
-                            </div>
-                        </div>
-                    </div>
-                    <!-- item -->
                 </div>
             </div>
-                       <div class="footer-twelev__copyright">
-                © Copyright 2024 by Sterimax India Pvt. Ltd.  Designed & Developed by CodeRest.
+            <!-- item -->
+            <div class="col-lg-2 col-md-6">
+                <div class="footer-twelev__widget">
+                    <h6 class="footer-twelev__title">Explore</h6>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="team.html">Meet Our Team</a></li>
+                        <li><a href="portfolio.html">Our Portfolio</a></li>
+                        <li><a href="blog.html">Latest News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- /.ffooter-twelev__copyright -->
-        </section>
-        <!-- /.ffooter-twelev -->
-        
+            <!-- item -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-twelev__widget">
+                    <h6 class="footer-twelev__title">Contact</h6>
+                    <div class="footer-twelev__info">
+                        <p class="footer-twelev__text">A606/1B, TTC Industrial Area, M.I.D.C.
+                            Near Millennium Business Park, Mahape,
+                            Navi Mumbai-400710
+                            Maharastra, India</p>
+                        <ul>
+                            <li><span class="linoor-icon-three-telephone-1"></span><a href="tel:3035550105">+912227784440</a></li>
+                            <li><span class="linoor-icon-three-email-1"></span><a href="mailto:sales@sterimaxengineering.com">sales@sterimaxengineering.com</a></li>
+                        </ul>
+                        <div class="footer-twelev__social">
+                            <a href="#"><span class="fab fa-facebook-f"></span></a>
+                            <a href="#"><span class="fab fa-twitter"></span></a>
+                            <a href="#"><span class="fab fa-pinterest-p"></span></a>
+                            <a href="#"><span class="fab fa-instagram"></span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- item -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-twelev__widget footer-twelev__widget--gallery">
+                    <h6 class="footer-twelev__title">Gallery</h6>
+                    <div class="footer-twelev__gallery">
+                        <a href="gallery.html">
+                            <img src="images/update-15-08-2024/resources/gallery-1-1.jpg" alt="linoor">
+                        </a>
+                        <a href="gallery.html">
+                            <img src="images/update-15-08-2024/resources/gallery-1-2.jpg" alt="linoor">
+                        </a>
+                        <a href="gallery.html">
+                            <img src="images/update-15-08-2024/resources/gallery-1-3.jpg" alt="linoor">
+                        </a>
+                        <a href="gallery.html">
+                            <img src="images/update-15-08-2024/resources/gallery-1-4.jpg" alt="linoor">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- item -->
         </div>
-        <!--End pagewrapper-->
-        
-        <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
-        
-        <script src="js/jquery.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/TweenMax.js"></script>
-        <script src="js/jquery-ui.js"></script>
-        <script src="js/jquery.fancybox.js"></script>
-        <script src="js/owl.js"></script>
-        <script src="js/mixitup.js"></script>
-        <script src="js/knob.js"></script>
-        <script src="js/validate.js"></script>
-        <script src="js/appear.js"></script>
-        <script src="js/slick.min.js"></script>
-        <script src="js/wow.js"></script>
-        <script src="js/jQuery.style.switcher.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.2/js.cookie.min.js">
-        </script>
-        <script src="js/jquery.easing.min.js"></script>
-        <script src="js/jarallax.min.js"></script>
-        <script src="js/swiper.min.js"></script>
-        <script src="js/custom-script.js"></script>
-        
-        <script src="js/lang.js"></script>
-        <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-        <script src="js/color-switcher.js"></script>
-        </body>
-        
-        </html>
+    </div>
+    <div class="footer-twelev__copyright" id="footer-copyright">
+        © Copyright 2024 by Sterimax India Pvt. Ltd. Designed & Developed by CodeRest.
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentYear = new Date().getFullYear();
+            var footerText = `© Copyright 2024 - ${currentYear} by Sterimax India Pvt. Ltd. Designed & Developed by CodeRest.`;
+            document.getElementById('footer-copyright').innerHTML = footerText;
+        });
+    </script>
+    <!-- /.ffooter-twelev__copyright -->
+</section>
+<!-- /.ffooter-twelev -->
+
+</div>
+<!--End pagewrapper-->
+
+<a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+<script src="js/jquery.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/TweenMax.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery.fancybox.js"></script>
+<script src="js/owl.js"></script>
+<script src="js/mixitup.js"></script>
+<script src="js/knob.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/appear.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/jQuery.style.switcher.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.1.2/js.cookie.min.js">
+</script>
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jarallax.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/custom-script.js"></script>
+
+<script src="js/lang.js"></script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="js/color-switcher.js"></script>
+</body>
+
+</html>
