@@ -390,9 +390,12 @@
         
             fetch('https://script.google.com/macros/s/AKfycby8NdBzKD9UPfwCZ5ctxH0A4qD2EnmcDKWhpRfmu6i2kTVzyxLJYeu-DYLtDRSFcyBO/exec', {
                 method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
                 body: new URLSearchParams(data)
             })
-            .then(response => response.text())
+            .then(response => response.json())
             .then(result => {
                 alert('Message sent successfully!');
             })
