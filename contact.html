@@ -340,7 +340,7 @@
                 <h2>Write Us a Message<span class="dot">.</span></h2>
             </div>
             <div class="default-form">
-                <form method="post" action="sendemail.php" id="contact-form" novalidate="novalidate">
+                <form id="contact-form">
                     <div class="row clearfix">
                         <div class="form-group col-lg-6 col-md-6 col-sm-12">
                             <div class="field-inner">
@@ -368,7 +368,7 @@
                             </div>
                         </div>
                         <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                            <button class="theme-btn btn-style-one">
+                            <button class="theme-btn btn-style-one" type="submit">
                                 <i class="btn-curve"></i>
                                 <span class="btn-title">Send message</span>
                             </button>
@@ -377,6 +377,31 @@
                 </form>
             </div>
         </div>
+        
+        <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            const formData = new FormData(event.target);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+        
+            fetch('https://script.google.com/macros/s/AKfycby8NdBzKD9UPfwCZ5ctxH0A4qD2EnmcDKWhpRfmu6i2kTVzyxLJYeu-DYLtDRSFcyBO/exec', {
+                method: 'POST',
+                body: new URLSearchParams(data)
+            })
+            .then(response => response.text())
+            .then(result => {
+                alert('Message sent successfully!');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error sending your message.');
+            });
+        });
+        </script>
     </div>
 </section>
 
