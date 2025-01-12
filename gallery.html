@@ -164,9 +164,9 @@
                                     <li class="dropdown"><a href="moulds.html">Moulds<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></a>
                                 
                                     </li>
-                                    <li class="dropdown"><a href="services.html">Services<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></a>
+                                    <li class="dropdown"><a href="services.html">Machines<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></a>
                                         <ul>
-                                                <li><a href="services.html">All Services</a></li>
+                                                <li><a href="services.html">All Machines</a></li>
                                                 <li><a href="CapSaling.html">Cap Sealing Machine: 400 Series</a></li>
                                                 <li><a href="FFS_3105.html">FFS 3105 Machine</a></li>
                                                 <li><a href="FFS_9105.html">FFS 9105 Machine</a></li>
@@ -246,141 +246,102 @@
             <!-- /.topbar -->
         </header>
 
-
-        <section class="page-banner">
-            <div class="image-layer" style="background-image:url(https://images.unsplash.com/photo-1676222490082-3ca102a06737?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);"></div>
-            <div class="shape-1"></div>
-            <div class="shape-2"></div>
-            <div class="banner-inner">
-                <div class="auto-container">
-                    <div class="inner-container clearfix">
-                        <h1>Memorise</h1>
-                        </div>
-                    </div>
+<section class="page-banner">
+    <div class="image-layer" style="background-image:url(https://images.unsplash.com/photo-1676222490082-3ca102a06737?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);"></div>
+    <div class="shape-1"></div>
+    <div class="shape-2"></div>
+    <div class="banner-inner">
+        <div class="auto-container">
+            <div class="inner-container clearfix">
+                <h1>Events</h1>
                 </div>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
+<style>
+    .category-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+        margin: 0 auto;
+    }
 
+    .category-gallery a {
+        flex: 1 1 100%;
+        text-decoration: none;
+        box-sizing: border-box;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    }
 
+    .category-gallery a img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        width: 300px; /* Ensure all images have the same width */
+        height: 200px; /* Ensure all images have the same height */
+        object-fit: cover; /* Maintain aspect ratio and cover the area */
+    }
 
-        <section class="gallery-section">
-            <div class="container">
-                <div class="row">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 1">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 2">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 3">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 4">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 5">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 6">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 7">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 8">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 9">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 10">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 11">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 12">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 13">
-                    <img src="myimg\1mchn.png" class="gallery-item" alt="Mould 14">
-                </div>
-            </div>
-          </section>
-          
-          <div class="lightbox" id="lightbox">
-            <img src="" alt="Lightbox Image" id="lightbox-img">
-          </div>
-          
-          <style>
-            /* General Gallery Styling */
-            .gallery-section {
-                padding: 20px 0;
-                background-color: #f9f9f9;
-            }
-          
-            .gallery-section .row {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px; /* Reduced gap for better alignment */
-                justify-content: center;
-            }
-          
-            /* Styling for Gallery Items */
-            .gallery-item {
-                width: calc(25% - 10px); /* Four items per row with consistent spacing */
-                height: auto;
-                border-radius: 10px;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                cursor: pointer;
-            }
-          
-            .gallery-item:hover {
-                transform: scale(1.05);
-                box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-            }
-          
-            /* Lightbox Styling */
-            .lightbox {
-                display: none;
-                position: fixed;
-                z-index: 999;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
-                justify-content: center;
-                align-items: center;
-            }
-          
-            .lightbox img {
-                max-width: 90%;
-                max-height: 90%;
-                border-radius: 10px;
-                box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-            }
-          
-            .lightbox:active {
-                display: none;
-            }
-          
-            /* Responsive Design */
-            @media (max-width: 1024px) {
-                .gallery-item {
-                    width: calc(33.33% - 10px); /* Three items per row on medium screens */
-                }
-            }
-          
-            @media (max-width: 768px) {
-                .gallery-item {
-                    width: calc(50% - 10px); /* Two items per row on small screens */
-                }
-            }
-          
-            @media (max-width: 576px) {
-                .gallery-item {
-                    width: 100%; /* One item per row on extra small screens */
-                }
-            }
-          </style>
-          
-          <script>
-            const galleryItems = document.querySelectorAll('.gallery-item');
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-          
-            galleryItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    lightbox.style.display = 'flex';
-                    lightboxImg.src = item.src;
-                });
-            });
-          
-            lightbox.addEventListener('click', () => {
-                lightbox.style.display = 'none';
-            });
-          </script>
+    .category-gallery a p {
+        margin-top: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+    }
 
+    /* Hover effect on anchor tag */
+    .category-gallery a:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        background-color: #f3f3f3;
+    }
 
+    /* Inline layout for desktop screens */
+    @media (min-width: 1024px) {
+        .category-gallery {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            padding: 20px;
+        }
+
+        .category-gallery a {
+            flex: 0 0 auto;
+            width: 300px;
+            margin-right: 20px;
+        }
+
+        .category-gallery a:last-child {
+            margin-right: 0;
+        }
+    }
+</style>
+
+<section class="category-gallery">
+    <a href="PMEC.html">
+        <img src="./myimg/PMEC/img_57.png" alt="Category Image">
+        <p>PMEC</p>
+    </a>
+    <a href="./riyad.html">
+        <img src="myimg/Riyadh/18.png" alt="Riyadh Events">
+        <p>Riyadh Events</p>
+    </a>
+    <a href="/nigeria.html">
+        <img src="./myimg/Exibition nigeria/img_1.png" alt="Exibition nigeria">
+        <p>Exibition nigeria</p>
+    </a>
+</section>
+
+        
+        
 
 <section class="footer-twelev footer-twelev--home-13">
     <div class="footer-twelev__bg" style="background-image: url(images/update-15-08-2024/shapes/footer-12-shape.png);"></div>
