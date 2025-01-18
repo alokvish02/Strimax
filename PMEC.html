@@ -270,10 +270,10 @@
                     <img src="./myimg/PMEC/img_2.png" class="gallery-item" alt="Mould 2"  loading="lazy">
                     <img src="./myimg/PMEC/img_3.png" class="gallery-item" alt="Mould 3"  loading="lazy">
                     <img src="./myimg/PMEC/img_4.png" class="gallery-item" alt="Mould 4"  loading="lazy">
-                    <img src="./myimg/PMEC/img_5.png" class="gallery-item" alt="Mould 5"  loading="lazy">
+                    <!-- <img src="./myimg/PMEC/img_5.png" class="gallery-item" alt="Mould 5"  loading="lazy"> -->
                     <img src="./myimg/PMEC/img_6.png" class="gallery-item" alt="Mould 6"  loading="lazy">
                     <img src="./myimg/PMEC/img_7.png" class="gallery-item" alt="Mould 7"  loading="lazy">
-                    <img src="./myimg/PMEC/img_8.png" class="gallery-item" alt="Mould 8"  loading="lazy">
+                    <!-- <img src="./myimg/PMEC/img_8.png" class="gallery-item" alt="Mould 8"  loading="lazy"> -->
                     <img src="./myimg/PMEC/img_9.png" class="gallery-item" alt="Mould 9"  loading="lazy">
                     <img src="./myimg/PMEC/img_10.png" class="gallery-item" alt="Mould 10"  loading="lazy">
                     <img src="./myimg/PMEC/img_11.png" class="gallery-item" alt="Mould 11"  loading="lazy">
@@ -406,48 +406,24 @@
                 }
             }
             </style>
-            
-            <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const galleryItems = document.querySelectorAll('.gallery-item');
-                const lightbox = document.getElementById('lightbox');
-                const lightboxImg = document.getElementById('lightbox-img');
-            
-                // Lazy loading images
-                const lazyLoad = (target) => {
-                    const options = {
-                        root: null,
-                        rootMargin: '0px',
-                        threshold: 0.1
-                    };
-            
-                    const callback = (entries, observer) => {
-                        entries.forEach(entry => {
-                            if (entry.isIntersecting) {
-                                const img = entry.target;
-                                img.src = img.getAttribute('data-src');
-                                observer.unobserve(img);
-                            }
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const galleryItems = document.querySelectorAll('.gallery-item');
+                            const lightbox = document.getElementById('lightbox');
+                            const lightboxImg = document.getElementById('lightbox-img');
+                        
+                            galleryItems.forEach(item => {
+                                item.addEventListener('click', function() {
+                                    lightboxImg.src = this.src;
+                                    lightbox.style.display = 'flex';
+                                });
+                            });
+                        
+                            lightbox.addEventListener('click', function() {
+                                lightbox.style.display = 'none';
+                            });
                         });
-                    };
-            
-                    const observer = new IntersectionObserver(callback, options);
-                    observer.observe(target);
-                };
-            
-                galleryItems.forEach(item => {
-                    lazyLoad(item);
-                    item.addEventListener('click', function() {
-                        lightboxImg.src = this.src;
-                        lightbox.style.display = 'flex';
-                    });
-                });
-            
-                lightbox.addEventListener('click', function() {
-                    lightbox.style.display = 'none';
-                });
-            });
-            </script>
+                        </script>
 
 
 

@@ -257,27 +257,41 @@
             <div class="banner-inner">
                 <div class="auto-container">
                     <div class="inner-container clearfix">
-                        <h1>Exibition nigeria</h1>
+                        <h1>Exibition Riyadh </h1>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
+<section class="gallery-section">
+    <div class="container">
+        <div class="row" id="gallery">
+            <!-- Existing images -->
+            <!-- <img src="./myimg/Riyadh/img_7.png" class="gallery-item" alt="Mould 7"> -->
+        </div>
+    </div>
+</section>
 
-        <section class="gallery-section">
-            <div class="container">
-                <div class="row">
-                    <img src="./myimg/Exibition nigeria/img_1.png" class="gallery-item" alt="Mould 1">
-                    <img src="./myimg/Exibition nigeria/img_2.png" class="gallery-item" alt="Mould 2">
-                    <img src="./myimg/Exibition nigeria/img_3.png" class="gallery-item" alt="Mould 3">
-                    <img src="./myimg/Exibition nigeria/img_4.png" class="gallery-item" alt="Mould 4">
-                    <img src="./myimg/Exibition nigeria/img_5.png" class="gallery-item" alt="Mould 5">
-                    <img src="./myimg/Exibition nigeria/img_6.png" class="gallery-item" alt="Mould 6">
-                    <img src="./myimg/Exibition nigeria/img_7.png" class="gallery-item" alt="Mould 7">
-                </div>
-            </div>
-          </section>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Preload images
+        for (let i = 1; i <= 66; i++) {
+            var img = new Image();
+            img.src = `./myimg/Riyadh/img_${i}.png`;
+        }
+
+        // Add images to the gallery
+        var gallery = document.getElementById('gallery');
+        for (let i = 7; i <= 66; i++) {
+            var img = document.createElement('img');
+            img.src = `./myimg/Riyadh/img_${i}.png`;
+            img.className = 'gallery-item';
+            img.alt = `Mould ${i}`;
+            gallery.appendChild(img);
+        }
+    });
+</script>
           
           <div class="lightbox" id="lightbox">
             <img src="" alt="Lightbox Image" id="lightbox-img">
