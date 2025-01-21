@@ -226,10 +226,13 @@
                             const langFeature = document.querySelector('.language-feature');
                             const langOptions = document.getElementById('langOptions');
                             const langChangerBtn = document.getElementById('langChangerBtn');
+                            let langOptionClicked = false;
                         
                             // Prevent click functionality of the langChangerBtn
                             langChangerBtn.addEventListener('click', function (event) {
-                                event.preventDefault(); // Prevent default click behavior
+                                if (!langOptionClicked) {
+                                    event.preventDefault(); // Prevent default click behavior if no language option was clicked
+                                }
                             });
                         
                             // Show language options on hover
@@ -246,8 +249,19 @@
                             document.querySelectorAll('.lang-option').forEach(button => {
                                 button.addEventListener('click', function () {
                                     const href = this.getAttribute('data-href');
-                                    window.location.href = href;
+                                    if (href) {
+                                        langOptionClicked = true;
+                                        window.location.href = href;
+                                    }
                                 });
+                            });
+                        
+                            // Prevent any default behavior if no language option is clicked
+                            window.addEventListener('beforeunload', function (event) {
+                                if (!langOptionClicked) {
+                                    event.preventDefault();
+                                    event.returnValue = '';
+                                }
                             });
                         </script>
                         <style>
@@ -635,9 +649,9 @@
                     </div>
                     <div class="col-lg-6 wow fadeInRight" data-wow-delay="100ms">
                         <div class="about-thirteen__image">
-                            <img src="images/update-15-08-2024/resources/about-13-2.jpg" alt="linoor">
+                            <img src="./myimg/one.jpg" alt="linoor">
                             <div class="about-thirteen__image__two">
-                                <img src="images/update-15-08-2024/resources/about-13-1.jpg" alt="linoor">
+                                <img src="./myimg/twojpg.jpg" alt="linoor">
                             </div>
                             <div class="about-thirteen__image__experiance">
                                                                <div class="about-thirteen__image__experiance__inner">
@@ -740,22 +754,9 @@
                                     SteriMax India’s 400 Series Cap Sealing Machines (412/416/420) offer reliable, high-performance sealing solutions for the pharmaceutical industry.
                                 </p>
                             </div>
+                            
                         </div>
-                        <div class="Discover">
-                            <a href="services.html" class="thm-btn-thirteen">Discover More</a>
-                            <style>
-                                @media (max-width: 768px) {
-                                    .thm-btn-thirteen {
-                                        width: 50%;
-                                        /* padding: 15px; */
-                                        font-size: 18px;
-                                        text-align: center;
-                                        display: block;
-                                        margin-left: 45%;
-                                    }
-                                }
-                            </style>
-                        </div>
+                        <a href="services.html" class="thm-btn-thirteen">Discover More</a>
                         <!-- service-thirteen__item -->
                     </div>
                     <!-- item -->
@@ -795,7 +796,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>                    
                     <div class="col-xl-6 wow fadeInRight" data-wow-delay="100ms">
                         <div class="why-choose-thirteen__image">
                             <img src="images/update-15-08-2024/resources/why-choose-image-2.png" alt="linoor">
@@ -1169,7 +1170,7 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="cta-thirteen__image">
-                            <img src="images/update-15-08-2024/resources/cta-13-1.png" alt="linoor">
+                            <!-- <img src="images/update-15-08-2024/resources/cta-13-1.png" alt="linoor"> -->
                         </div>
                     </div>
                 </div>
@@ -1313,7 +1314,7 @@
                                     Maharastra, India</p>
                                 <ul>
                                     <li><span class="linoor-icon-three-telephone-1"></span><a href="tel:3035550105">+912227784440</a></li>
-                                    <li><span class="linoor-icon-three-email-1"></span><a href="mailto:sales@sterimaxengineering.com">sales@sterimaxengineering.com</a></li>
+                                    <li><span class="linoor-icon-three-email-1"></span><a href="mailto:sales@sterimaxengineering.com">sterimaxengineering.com</a></li>
                                 </ul>
                                 <div class="footer-twelev__social">
                                     <a href="#"><span class="fab fa-facebook-f"></span></a>
