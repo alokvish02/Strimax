@@ -52,23 +52,6 @@
 
     <div class="page-wrapper">
 
-        <!-- style switcher -->
-        <div class="style-switcher">
-            <a href="#" id="switcher-toggler"><i class="fa fa-cog"></i></a>
-            <div class="language-feature">
-                <button class="ltr-switcher" data-href="#googtrans(en|en)">LTR</button>
-                <!-- /.ltr-switcher -->
-                <button class="rtl-switcher" data-href="#googtrans(en|ar)">RTL</button>
-                <!-- /.rtl-switcher -->
-            </div>
-            <!-- /.language-feature -->
-            <div class="layout-feature">
-                <a href="#" class="dark-switcher">Dark</a>
-                <button class="boxed-switcher">Boxed</button>
-                <!-- /.ltr-switcher -->
-            </div>
-            <!-- /.language-feature -->
-        </div>
 
 
         <!--Mobile Menu-->
@@ -91,7 +74,7 @@
                 <!-- /.side-menu__sep -->
                 <div class="side-menu__content">
                     <!-- <p>Linoor is a premium Template for Digital Agencies, Start Ups, Small Business and a wide range of other agencies.</p> -->
-                    <p><a href="mailto:needhelp@linoor.com">needhelp@linoor.com</a> <br> <a href="tel:888-999-0000">+912227784440</a></p>
+                    <p><a href="mailto:sales@sterimaxengineering.com">sales@sterimaxengineering.com</a> <br> <a href="tel:888-999-0000">+912227784440</a></p>
                     <div class="side-menu__social">
                         <a href="#"><i class="fab fa-facebook-square"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -214,7 +197,139 @@
                             </div>
                         </nav>
                     <div class="header-style-thirteen__btn clearfix">
-                        <button type="button" class="search-toggler"><span class="flaticon-loupe"></span></button>
+                        <button id="openModalBtn" type="button" class="cart-toggler inquiry-button">
+                            <img src="./myimg/handshake-solid.svg" alt="Inquiry Icon" class="inquiry-icon">
+                        </button>
+                        <div id="inquiryModal" class="modal">
+                            <div class="modal-content">
+                                <span class="close">&times;</span>
+                                <h2>Inquiry Form</h2>
+                                <form action="submit_inquiry.php" method="post">
+                                    <label for="name">Name:</label>
+                                    <input type="text" id="name" name="name" required>
+                                    <label for="email">Email:</label>
+                                    <input type="email" id="email" name="email" required>
+                                    <label for="message">Message:</label>
+                                    <textarea id="message" name="message" required></textarea>
+                                    <button type="submit" class="thm-btn-thirteen">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+                        <style>
+                            .modal {
+                                display: none;
+                                position: fixed;
+                                z-index: 1;
+                                left: 0;
+                                top: 0;
+                                width: 100%;
+                                height: 100%;
+                                overflow: auto;
+                                background-color: rgba(0, 0, 0, 0.4);
+                                padding-top: 60px;
+                            }
+                        
+                            .modal-content {
+                                background-color: #fefefe;
+                                margin: 5% auto;
+                                padding: 20px;
+                                border: 1px solid #888;
+                                width: 80%;
+                                max-width: 600px;
+                                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                                border-radius: 10px;
+                            }
+                        
+                            .close {
+                                color: #aaa;
+                                float: right;
+                                font-size: 28px;
+                                font-weight: bold;
+                            }
+                        
+                            .close:hover,
+                            .close:focus {
+                                color: black;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+                        
+                            .modal-content form {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                        
+                            .modal-content form label,
+                            .modal-content form input,
+                            .modal-content form textarea,
+                            .modal-content form button {
+                                margin-bottom: 10px;
+                            }
+                        
+                            .modal-content form input,
+                            .modal-content form textarea {
+                                width: 100%;
+                                padding: 10px;
+                                border: 1px solid #ccc;
+                                border-radius: 5px;
+                            }
+                        
+                            .modal-content form button {
+                                background-color: #644EEE;
+                                color: white;
+                                border: none;
+                                padding: 10px;
+                                border-radius: 5px;
+                                cursor: pointer;
+                            }
+                        
+                            .modal-content form button:hover {
+                                background-color: #503bb3;
+                            }
+                            .inquiry-button {
+                                background-color: #644EEE;
+                                border: none;
+                                padding: 10px;
+                                border-radius: 5px;
+                                transition: background-color 0.3s, filter 0.3s;
+                            }
+
+                            .inquiry-button .inquiry-icon {
+                                width: 24px;
+                                height: 24px;
+                                filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+                                transition: filter 0.3s;
+                            }
+
+                            .inquiry-button:hover {
+                                background-color: white;
+                            }
+
+                            .inquiry-button:hover .inquiry-icon {
+                                filter: invert(27%) sepia(83%) saturate(2923%) hue-rotate(239deg) brightness(95%) contrast(101%);
+                            }
+                        </style>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function() {
+                                var modal = document.getElementById("inquiryModal");
+                                var btn = document.getElementById("openModalBtn");
+                                var span = document.getElementsByClassName("close")[0];
+                        
+                                btn.onclick = function() {
+                                    modal.style.display = "block";
+                                }
+                        
+                                span.onclick = function() {
+                                    modal.style.display = "none";
+                                }
+                        
+                                window.onclick = function(event) {
+                                    if (event.target == modal) {
+                                        modal.style.display = "none";
+                                    }
+                                }
+                            });
+                        </script>
                         <!--Search Btn-->
                         <!-- <a href="cart.html" class="cart-toggler"><span class="flaticon-shopping-cart"></span></a> -->
                         <!-- cart btn -->
@@ -233,7 +348,7 @@
                     <div class="topbar-thirteen__wrapper">
                         <ul class="topbar-thirteen__info">
                             <li><span class="linoor-icon-three-location-pin-1"></span>M.I.D.C. Near Millennium Business Park, Mahape, Navi Mumbai-400710 Maharastra, India</li>
-                            <li><span class="linoor-icon-three-email-1"></span><a href="mailto:needhelp@company.com">sales@sterimaxengineering.com</a></li>
+                            <li><span class="linoor-icon-three-email-1"></span><a href="sales@sterimaxengineering.com">sales@sterimaxengineering.com</a></li>
                         </ul>
                         <ul class="list-unstyled topbar-thirteen__social">
                             <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>

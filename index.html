@@ -50,22 +50,15 @@
     <div class="page-wrapper">
 
         <!-- style switcher -->
-        <div class="style-switcher">
+        <!-- <div class="style-switcher">
             <a href="#" id="switcher-toggler"><i class="fa fa-cog"></i></a>
             <div class="language-feature">
-                <button class="ltr-switcher" data-href="#googtrans(en|en)">LTR</button>
-                <!-- /.ltr-switcher -->
-                <button class="rtl-switcher" data-href="#googtrans(en|ar)">RTL</button>
-                <!-- /.rtl-switcher -->
+                <button class="ltr-switcher" data-href="#googtrans(en|en)">Eng</button>
+                <button class="rtl-switcher" data-href="#googtrans(en|ar)">Ar</button>
             </div>
-            <!-- /.language-feature -->
-            <div class="layout-feature">
-                <a href="#" class="dark-switcher">Dark</a>
-                <button class="boxed-switcher">Boxed</button>
-                <!-- /.ltr-switcher -->
-            </div>
-            <!-- /.language-feature -->
-        </div>
+        </div> -->
+
+
         <!-- Preloader -->
         <div class="preloader">
             <div class="icon" style="background-image: url(images/update-15-08-2024/loader-12.png);"></div>
@@ -92,7 +85,7 @@
                 <!-- /.side-menu__sep -->
                 <div class="side-menu__content">
                     <!-- <p>Linoor is a premium Template for Digital Agencies, Start Ups, Small Business and a wide range of other agencies.</p> -->
-                    <p><a href="mailto:needhelp@linoor.com">needhelp@linoor.com</a> <br> <a href="tel:888-999-0000">+912227784440</a></p>
+                    <p><a href="mailto:sales@sterimaxengineering.com">sales@sterimaxengineering.com</a> <br> <a href="tel:888-999-0000">+912227784440</a></p>
                     <div class="side-menu__social">
                         <a href="#"><i class="fab fa-facebook-square"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -216,6 +209,74 @@
                         </nav>
                     <div class="header-style-thirteen__btn clearfix">
                         <!-- <button type="button" class="search-toggler"><span class="flaticon-loupe"></span></button> -->
+                        <div class="language-feature" style="position: relative;">
+                            <a id="langChangerBtn" href="#" class="cart-toggler inquiry-button">
+                                <img src="./myimg/language.svg" alt="Language Icon" class="inquiry-icon">
+                            </a>
+                        
+                            <!-- Language Options -->
+                            <div id="langOptions" class="language-options" style="display: none; position: absolute; background: white; border: 1px solid #ccc; padding: 10px; z-index: 100;">
+                                <button class="lang-option" data-href="#googtrans(en|en)">English</button>
+                                <button class="lang-option" data-href="#googtrans(en|hi)">Hindi</button>
+                                <button class="lang-option" data-href="#googtrans(en|ar)">Arabic</button>
+                                <button class="lang-option" data-href="#googtrans(en|ur)">Urdu</button>
+                            </div>
+                        </div>
+                        <script>
+                            const langFeature = document.querySelector('.language-feature');
+                            const langOptions = document.getElementById('langOptions');
+                            const langChangerBtn = document.getElementById('langChangerBtn');
+                        
+                            // Prevent click functionality of the langChangerBtn
+                            langChangerBtn.addEventListener('click', function (event) {
+                                event.preventDefault(); // Prevent default click behavior
+                            });
+                        
+                            // Show language options on hover
+                            langFeature.addEventListener('mouseover', () => {
+                                langOptions.style.display = 'block';
+                            });
+                        
+                            // Hide language options when not hovering
+                            langFeature.addEventListener('mouseout', () => {
+                                langOptions.style.display = 'none';
+                            });
+                        
+                            // Add click event listener to each language button
+                            document.querySelectorAll('.lang-option').forEach(button => {
+                                button.addEventListener('click', function () {
+                                    const href = this.getAttribute('data-href');
+                                    window.location.href = href;
+                                });
+                            });
+                        </script>
+                        <style>
+                            .language-options {
+                                display: none;
+                                position: absolute;
+                                background: white;
+                                border: 1px solid #ccc;
+                                padding: 10px;
+                                z-index: 100;
+                                border-radius: 5px;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            }
+                            
+                            .lang-option {
+                                display: block;
+                                background: none;
+                                border: none;
+                                padding: 8px 12px;
+                                cursor: pointer;
+                                text-align: left;
+                                width: 100%;
+                            }
+                            
+                            .lang-option:hover {
+                                background-color: #f1f1f1;
+                            }
+                        </style>
+                        
                         <button id="openModalBtn" type="button" class="cart-toggler inquiry-button">
                             <img src="./myimg/handshake-solid.svg" alt="Inquiry Icon" class="inquiry-icon">
                         </button>
@@ -368,7 +429,7 @@
                     <div class="topbar-thirteen__wrapper">
                         <ul class="topbar-thirteen__info">
                             <li><span class="linoor-icon-three-location-pin-1"></span>M.I.D.C. Near Millennium Business Park, Mahape, Navi Mumbai-400710 Maharastra, India</li>
-                            <li><span class="linoor-icon-three-email-1"></span><a href="mailto:needhelp@company.com">sales@sterimaxengineering.com</a></li>
+                            <li><span class="linoor-icon-three-email-1"></span><a href="mailto:sales@sterimaxengineering.com">sales@sterimaxengineering.com</a></li>
                         </ul>
                         <ul class="list-unstyled topbar-thirteen__social">
                             <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
@@ -448,6 +509,7 @@
                         <div class="slider-thirteen__btn">
                             <a href="contact.html" class="thm-btn-thirteen">Discover More</a>
                         </div>
+                        
                     </div>
                 </div>
                 <div class="slider-thirteen__layer">
@@ -680,8 +742,20 @@
                             </div>
                         </div>
                         <div class="Discover">
-                        <a href="services.html" class="thm-btn-thirteen">Discover More</a>
-                    </div>
+                            <a href="services.html" class="thm-btn-thirteen">Discover More</a>
+                            <style>
+                                @media (max-width: 768px) {
+                                    .thm-btn-thirteen {
+                                        width: 50%;
+                                        /* padding: 15px; */
+                                        font-size: 18px;
+                                        text-align: center;
+                                        display: block;
+                                        margin-left: 45%;
+                                    }
+                                }
+                            </style>
+                        </div>
                         <!-- service-thirteen__item -->
                     </div>
                     <!-- item -->
