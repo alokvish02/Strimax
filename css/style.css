@@ -27562,7 +27562,7 @@ img.lazy-image.loaded {
 .header-style-thirteen__btn .search-toggler,
 .header-style-thirteen__btn .cart-toggler {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #644EEE;
     width: 40px;
     height: 40px;
     border-radius: 50%;

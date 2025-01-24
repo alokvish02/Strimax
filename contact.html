@@ -80,7 +80,7 @@
                         <a href="#"><i class="fab fa-facebook-square"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <!-- /.side-menu__content -->
@@ -354,7 +354,7 @@
                         <ul class="list-unstyled topbar-thirteen__social">
                             <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
                             <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
+                            <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
                             <li><a href="#"><span class="fab fa-instagram"></span></a></li>
                         </ul>
                         <!-- /.social-links -->
@@ -458,31 +458,31 @@
                 <h2>Write Us a Message<span class="dot">.</span></h2>
             </div>
             <div class="default-form">
-                <form id="contact-form">
+                <form id="contact-form" action="./backend/contact.php" method="POST">
                     <div class="row clearfix">
                         <div class="form-group col-lg-6 col-md-6 col-sm-12">
                             <div class="field-inner">
-                                <input type="text" name="username" value="" placeholder="Your Name" required="">
+                                <input type="text" name="username" placeholder="Your Name" required>
                             </div>
                         </div>
                         <div class="form-group col-lg-6 col-md-6 col-sm-12">
                             <div class="field-inner">
-                                <input type="email" name="email" value="" placeholder="Email Address" required="">
+                                <input type="email" name="email" placeholder="Email Address" required>
                             </div>
                         </div>
                         <div class="form-group col-lg-6 col-md-6 col-sm-12">
                             <div class="field-inner">
-                                <input type="text" name="phone" value="" placeholder="Phone Number" required="">
+                                <input type="text" name="phone" placeholder="Phone Number" required>
                             </div>
                         </div>
                         <div class="form-group col-lg-6 col-md-6 col-sm-12">
                             <div class="field-inner">
-                                <input type="text" name="subject" value="" placeholder="Subject" required="">
+                                <input type="text" name="subject" placeholder="Subject" required>
                             </div>
                         </div>
                         <div class="form-group col-lg-12 col-md-12 col-sm-12">
                             <div class="field-inner">
-                                <textarea name="message" placeholder="Write Message" required=""></textarea>
+                                <textarea name="message" placeholder="Write Message" required></textarea>
                             </div>
                         </div>
                         <div class="form-group col-lg-12 col-md-12 col-sm-12">
@@ -492,37 +492,11 @@
                             </button>
                         </div>
                     </div>
-                </form>
+                </form>                
             </div>
         </div>
         
-        <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
         
-            const formData = new FormData(event.target);
-            const data = {};
-            formData.forEach((value, key) => {
-                data[key] = value;
-            });
-        
-            fetch('https://script.google.com/macros/s/AKfycby8NdBzKD9UPfwCZ5ctxH0A4qD2EnmcDKWhpRfmu6i2kTVzyxLJYeu-DYLtDRSFcyBO/exec', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: new URLSearchParams(data)
-            })
-            .then(response => response.json())
-            .then(result => {
-                alert('Message sent successfully!');
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('There was an error sending your message.');
-            });
-        });
-        </script>
     </div>
 </section>
 
@@ -577,33 +551,33 @@
                         <div class="footer-twelev__social">
                             <a href="#"><span class="fab fa-facebook-f"></span></a>
                             <a href="#"><span class="fab fa-twitter"></span></a>
-                            <a href="#"><span class="fab fa-pinterest-p"></span></a>
+                            <a href="#"><span class="fab fa-linkedin-in"></span></a>
                             <a href="#"><span class="fab fa-instagram"></span></a>
                         </div>
                     </div>
                 </div>
             </div>
-                        <!-- item -->
-                        <div class="col-lg-3 col-md-6">
-                            <div class="footer-twelev__widget footer-twelev__widget--gallery">
-                                <h6 class="footer-twelev__title">Gallery</h6>
-                                <div class="footer-twelev__gallery">
-                                    <a href="gallery.html">
-                                        <img src="./myimg/PMEC/img_5.png" alt="linoor">
-                                    </a>
-                                    <a href="gallery.html">
-                                        <img src="./myimg/PMEC/img_8.png" alt="linoor">
-                                    </a>
-                                    <a href="gallery.html">
-                                        <img src="./myimg/PMEC/img_21.png" alt="linoor">
-                                    </a>
-                                    <a href="gallery.html">
-                                        <img src="./myimg/PMEC/img_20.png" alt="linoor">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item -->
+            <!-- item -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-twelev__widget footer-twelev__widget--gallery">
+                    <h6 class="footer-twelev__title">Gallery</h6>
+                    <div class="footer-twelev__gallery">
+                        <a href="gallery.html">
+                            <img src="./myimg/PMEC/img_5.png" alt="linoor">
+                        </a>
+                        <a href="gallery.html">
+                            <img src="./myimg/PMEC/img_8.png" alt="linoor">
+                        </a>
+                        <a href="gallery.html">
+                            <img src="./myimg/PMEC/img_21.png" alt="linoor">
+                        </a>
+                        <a href="gallery.html">
+                            <img src="./myimg/PMEC/img_20.png" alt="linoor">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- item -->
         </div>
     </div>
     <div class="footer-twelev__copyright" id="footer-copyright">
