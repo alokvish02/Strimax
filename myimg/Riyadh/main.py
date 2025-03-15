@@ -2,7 +2,7 @@ import os
 from PIL import Image, UnidentifiedImageError
 
 # Directory containing the .heic files
-directory = r'C:\Users\Alok Vish\Desktop\Sterimax\myimg\Riyadh'
+directory = r'C:\Users\Alok Vish\Desktop\SteriMax\myimg\Riyadh'
 
 # Get a list of all .heic files in the directory
 heic_files = [f for f in os.listdir(directory) if f.endswith('.JPG')]

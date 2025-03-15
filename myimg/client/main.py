@@ -1,7 +1,7 @@
 import os
 
 # Directory containing the .heic files
-directory = r'C:\Users\Alok Vish\Desktop\Sterimax\myimg\client'
+directory = r'C:\Users\Alok Vish\Desktop\SteriMax\myimg\client'
 
 # Get a list of all .heic files in the directory
 heic_files = [f for f in os.listdir(directory) if f.endswith('.png')]
