@@ -51,6 +51,10 @@
 <body>
 
     <div class="page-wrapper">
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="icon" style="background-image: url(images/update-15-08-2024/loader-12.png);"></div>
+        </div>
 
 
         <!--Mobile Menu-->
@@ -73,12 +77,13 @@
                 <!-- /.side-menu__sep -->
                 <div class="side-menu__content">
                     <!-- <p>Linoor is a premium Template for Digital Agencies, Start Ups, Small Business and a wide range of other agencies.</p> -->
-                    <p><a href="mailto:sales@SteriMaxengineering.com">sales@SteriMaxengineering.com</a> <br> <a href="tel:888-999-0000">+912227784440</a></p>
+                    <p><a href="mailto:sales@SteriMaxEngineering.com">sales@SteriMaxEngineering.com</a> <br> <a href="tel:+912227784440">+912227784440</a></p>
                     <div class="side-menu__social">
                         <a href="#"><i class="fab fa-facebook-square"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><span class="fab fa-linkedin-in"></span></a>
+
                     </div>
                 </div>
                 <!-- /.side-menu__content -->
@@ -157,6 +162,7 @@
                                                 <li><a href="FFS_9105.html">FFS 9105 Machine</a></li>
                                                 <li><a href="BFS_9166.html">BFS 9166 Machine</a></li>
                                                 <li><a href="BFS_8166.html">BFS 8166 Machine</a></li>
+                                                <li><a href="BFS_540.html">BFS 540 Machine</a></li>
                                             </ul>   
                                     </li>
                                     <li class="dropdown"><a href="portfolio.html">Portfolio<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></a>
@@ -166,9 +172,6 @@
                                             </li>
                                         </ul> 
                                     </li>
-                                    <li class="dropdown"><a href="facility.html">Facility<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></a>
-                                        
-                                    </li>
                                     <!-- <li class="dropdown"><a href="shop.html">Shop<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></a>
                                         <ul>
                                             <li><a href="shop.html">Shop Page</a></li>
@@ -177,6 +180,9 @@
                                             <li><a href="checkout.html">Checkout Page</a></li>
                                         </ul>
                                     </li> -->
+                                    <li class="dropdown"><a href="facility.html">Facility<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></a>
+                                        
+                                    </li>
                                     <li class="dropdown"><a href="blog-grid.html">Blog<div class="dropdown-btn"><span class="fa fa-angle-right"></span></div></a>
                                         <!-- <ul>
                                             <li><a href="blog.html">Blog Right Sidebar</a></li>
@@ -196,6 +202,82 @@
                             </div>
                         </nav>
                     <div class="header-style-thirteen__btn clearfix">
+                        <!-- <button type="button" class="search-toggler"><span class="flaticon-loupe"></span></button> -->
+                        <div class="language-feature" style="position: relative;">
+                            <a id="langChangerBtn" href="#" class="cart-toggler inquiry-button">
+                                <img src="./myimg/language.svg" alt="Language Icon" class="inquiry-icon">
+                            </a>
+                        
+                            <!-- Language Options -->
+                            <div id="langOptions" class="language-options" style="display: none; position: absolute; background: white; border: 1px solid #ccc; padding: 10px; z-index: 100;">
+                                <button class="lang-option" data-href="#googtrans(en|en)">English</button>
+                                <button class="lang-option" data-href="#googtrans(en|hi)">Hindi</button>
+                                <!-- <button class="lang-option" data-href="#googtrans(en|ar)">Arabic</button>
+                                <button class="lang-option" data-href="#googtrans(en|ur)">Urdu</button>                                 -->
+
+                            </div>
+                        </div>
+                        <script>
+                            const langFeature = document.querySelector('.language-feature');
+                            const langOptions = document.getElementById('langOptions');
+                            const langChangerBtn = document.getElementById('langChangerBtn');
+                            let langOptionClicked = false;
+                        
+                            // Prevent click functionality of the langChangerBtn
+                            langChangerBtn.addEventListener('click', function (event) {
+                                if (!langOptionClicked) {
+                                    event.preventDefault(); // Prevent default click behavior if no language option was clicked
+                                }
+                            });
+                        
+                            // Show language options on hover
+                            langFeature.addEventListener('mouseover', () => {
+                                langOptions.style.display = 'block';
+                            });
+                        
+                            // Hide language options when not hovering
+                            langFeature.addEventListener('mouseout', () => {
+                                langOptions.style.display = 'none';
+                            });
+                        
+                            // Add click event listener to each language button
+                            document.querySelectorAll('.lang-option').forEach(button => {
+                                button.addEventListener('click', function () {
+                                    const href = this.getAttribute('data-href');
+                                    if (href) {
+                                        langOptionClicked = true;
+                                        window.location.href = href;
+                                    }
+                                });
+                            });
+                        </script>
+                        <style>
+                            .language-options {
+                                display: none;
+                                position: absolute;
+                                background: white;
+                                border: 1px solid #ccc;
+                                padding: 10px;
+                                z-index: 100;
+                                border-radius: 5px;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            }
+                            
+                            .lang-option {
+                                display: block;
+                                background: none;
+                                border: none;
+                                padding: 8px 12px;
+                                cursor: pointer;
+                                text-align: left;
+                                width: 100%;
+                            }
+                            
+                            .lang-option:hover {
+                                background-color: #f1f1f1;
+                            }
+                        </style>
+                        
                         <button id="openModalBtn" type="button" class="cart-toggler inquiry-button">
                             <img src="./myimg/handshake-solid.svg" alt="Inquiry Icon" class="inquiry-icon">
                         </button>
@@ -203,7 +285,7 @@
                             <div class="modal-content">
                                 <span class="close">&times;</span>
                                 <h2>Inquiry Form</h2>
-                                <form action="submit_inquiry.php" method="post">
+                                <form action="backend/submit_inquiry.php" method="post">
                                     <label for="name">Name:</label>
                                     <input type="text" id="name" name="name" required>
                                     <label for="email">Email:</label>
@@ -329,6 +411,7 @@
                                 }
                             });
                         </script>
+
                         <!--Search Btn-->
                         <!-- <a href="cart.html" class="cart-toggler"><span class="flaticon-shopping-cart"></span></a> -->
                         <!-- cart btn -->
@@ -347,7 +430,7 @@
                     <div class="topbar-thirteen__wrapper">
                         <ul class="topbar-thirteen__info">
                             <li><span class="linoor-icon-three-location-pin-1"></span>M.I.D.C. Near Millennium Business Park, Mahape, Navi Mumbai-400710 Maharastra, India</li>
-                            <li><span class="linoor-icon-three-email-1"></span><a href="mailto:sales@SteriMaxengineering.com">sales@SteriMaxengineering.com</a></li>
+                            <li><span class="linoor-icon-three-email-1"></span><a href="mailto:sales@SteriMaxengineering.com">sales@SteriMaxEngineering.com</a></li>
                         </ul>
                         <ul class="list-unstyled topbar-thirteen__social">
                             <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
@@ -362,7 +445,6 @@
             </div>
             <!-- /.topbar -->
         </header>
-
 
         <section class="page-banner">
             <div class="image-layer" style="background-image:url(https://images.unsplash.com/photo-1578496479531-32e296d5c6e1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);"></div>
@@ -443,7 +525,6 @@
         });
     </script>
 
-
 <section class="footer-twelev footer-twelev--home-13">
     <div class="footer-twelev__bg" style="background-image: url(images/update-15-08-2024/shapes/footer-12-shape.png);"></div>
     <div class="container">
@@ -452,7 +533,7 @@
                 <div class="footer-twelev__widget">
                     <h6 class="footer-twelev__title">SteriMax India Pvt.ltd.</h6>
                     <p class="footer-twelev__text">SteriMax was established in November, 2007 with vision of serving pharmaceutical Industry with his innovative machineries manufactured first time in India. In India there was huge demand for IV Fluid….</p>
-                    <form method="post" action="contact.html">
+                    <form method="post" action="backend/newsletter.php">
                         <input type="email" name="email" value="" placeholder="Email Address" required="">
                         <button type="submit" class="theme-btn"><i class="fas fa-paper-plane"></i></button>
                     </form>
@@ -486,7 +567,7 @@
                             Maharastra, India</p>
                         <ul>
                             <li><span class="linoor-icon-three-telephone-1"></span><a href="tel:3035550105">+912227784440</a></li>
-                            <li><span class="linoor-icon-three-email-1"></span><a href="mailto:sales@SteriMaxengineering.com">sales@SteriMaxengineering.com</a></li>
+                            <li><span class="linoor-icon-three-email-1"></span><a href="mailto:sales@SteriMaxengineering.com">SteriMaxEngineering.com</a></li>
                         </ul>
                         <div class="footer-twelev__social">
                             <a href="#"><span class="fab fa-facebook-f"></span></a>
@@ -497,27 +578,27 @@
                     </div>
                 </div>
             </div>
-                        <!-- item -->
-                        <div class="col-lg-3 col-md-6">
-                            <div class="footer-twelev__widget footer-twelev__widget--gallery">
-                                <h6 class="footer-twelev__title">Gallery</h6>
-                                <div class="footer-twelev__gallery">
-                                    <a href="gallery.html">
-                                        <img src="./myimg/PMEC/img_5.png" alt="linoor">
-                                    </a>
-                                    <a href="gallery.html">
-                                        <img src="./myimg/PMEC/img_8.png" alt="linoor">
-                                    </a>
-                                    <a href="gallery.html">
-                                        <img src="./myimg/PMEC/img_21.png" alt="linoor">
-                                    </a>
-                                    <a href="gallery.html">
-                                        <img src="./myimg/PMEC/img_20.png" alt="linoor">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- item -->
+            <!-- item -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-twelev__widget footer-twelev__widget--gallery">
+                    <h6 class="footer-twelev__title">Gallery</h6>
+                    <div class="footer-twelev__gallery">
+                        <a href="gallery.html">
+                            <img src="./myimg/PMEC/img_5.png" alt="linoor">
+                        </a>
+                        <a href="gallery.html">
+                            <img src="./myimg/PMEC/img_8.png" alt="linoor">
+                        </a>
+                        <a href="gallery.html">
+                            <img src="./myimg/PMEC/img_21.png" alt="linoor">
+                        </a>
+                        <a href="gallery.html">
+                            <img src="./myimg/PMEC/img_20.png" alt="linoor">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- item -->
         </div>
     </div>
     <div class="footer-twelev__copyright" id="footer-copyright">
