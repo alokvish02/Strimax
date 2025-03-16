@@ -468,42 +468,55 @@
  -->
 
 
-
-        <section class="product-details">
-            <div class="auto-container">
-                <div class="row">
-                    <div class="col-lg-12 col-xl-6">
-                        <a href="./myimg/Machine/3105.jpg" class="product-details__image lightbox-image">
-                            <img src="./myimg/Machine/3105.jpg" alt="">
-                        </a><!-- /.product-details__image -->
-                    </div><!-- /.col-md-12 col-lg-6 -->
-                    <div class="col-lg-12 col-xl-6">
-                        <div class="product-details__top">
-                            <h3 class="product-details__title">
-                                FFS 3105 MACHINE
-                            </h3><!-- /.product-details__title -->
-                            <!-- <p class="product-details__price">$46.98</p> -->
-                        </div><!-- /.product-details__top -->
-                        <div class="product-details__reveiw">
-                            <!-- <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <span>2 Customer Reviews</span> -->
-                        </div><!-- /.product-details__reveiw -->
-                        <div class="product-details__content">
-                            <p>SteriMax India has successfully developed total indigenous and most economical Version of Blow Fill Seal (BFS) Machines which meets to the requirement of pharmaceutical industry. Our complete design of BFS Machine meets to the cGMP norms & US FDA Regulatory obligations. All Product contact parts are made up of SS 316L, non-Contact parts are in SS 304.</p>
-                            <p>Machine is facilated with In-Situ CIP(Cleaning In Place) / SIP (Sterilization In Place) which provides printed records of sterilization cycle as documentary evidence. Integrity of Product and Air Filters can also check and recorded. SteriMax India BFS Machine is designed to Integrate Filling Cycle in continuous manner over the single machine under class 100 environment to ensure complete aseptic production in most economical way. All machines are provided with DQ /IQ /OQ /PQ documentation.
-                                </p>
-                        </div><!-- /.product-details__content -->
-                       
-                    </div><!-- /.col-md-12 col-lg-6 -->
-                </div><!-- /.row -->
-            </div><!-- /.container -->
-        </section>
+ <section class="product-details">
+    <div class="auto-container">
+        <div class="row">
+            <div class="col-lg-12 col-xl-6">
+                <div class="product-details__video-container">
+                    <video class="product-details__video" width="640" height="360" autoplay muted loop playsinline>
+                        <source src="./myimg/Machine/3105.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <!-- Rest of the content remains the same -->
+            <div class="col-lg-12 col-xl-6">
+                <div class="product-details__top">
+                    <h3 class="product-details__title">
+                        FFS 3105 MACHINE
+                    </h3>
+                </div>
+                <div class="product-details__reveiw">
+                </div>
+                <div class="product-details__content">
+                    <p>SteriMax India has successfully developed total indigenous and most economical Version of Blow Fill Seal (BFS) Machines which meets to the requirement of pharmaceutical industry. Our complete design of BFS Machine meets to the cGMP norms & US FDA Regulatory obligations. All Product contact parts are made up of SS 316L, non-Contact parts are in SS 304.</p>
+                    <p>Machine is facilated with In-Situ CIP(Cleaning In Place) / SIP (Sterilization In Place) which provides printed records of sterilization cycle as documentary evidence. Integrity of Product and Air Filters can also check and recorded. SteriMax India BFS Machine is designed to Integrate Filling Cycle in continuous manner over the single machine under class 100 environment to ensure complete aseptic production in most economical way. All machines are provided with DQ /IQ /OQ /PQ documentation.
+                        </p>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</section>
 
 <style>
+    /* Add video styling */
+    .product-details__video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+    }
+    
+    .product-details__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     .product-description__list {
         display: flex;
         flex-wrap: wrap;
@@ -511,9 +524,8 @@
     
     .product-description__column {
         flex: 1;
-        min-width: 300px; /* Adjust based on your design */
+        min-width: 300px;
         padding: 10px;
-        
     }
     
     .product-description__column p {
